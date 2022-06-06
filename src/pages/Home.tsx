@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react';
+import React, { useState } from 'react';
 import { Alert, StyleSheet, View } from 'react-native';
 
 import { Header } from '../components/Header';
@@ -7,10 +7,6 @@ import { TodoInput } from '../components/TodoInput';
 
 export function Home() {
   const [tasks, setTasks] = useState<Task[]>([]);
-
-  useEffect(() => {
-    console.log(tasks);
-  }, [tasks])
 
   function handleAddTask(newTaskTitle: string) {
     if(tasks.find(task => task.title === newTaskTitle)) {

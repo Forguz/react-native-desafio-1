@@ -19,7 +19,6 @@ export const TaskItem = ({task, index, toggleTaskDone, removeTask, editTask}: Ta
   const textInputRef = useRef<TextInput>(null)
 
   useEffect(() => {
-    console.log(newTaskTitleValue);
     if(textInputRef.current) {
       if(isEditing) {
         textInputRef.current.focus();
